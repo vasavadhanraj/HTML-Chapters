@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Event</title>
+        <script>
+            function sclick(){
+                alert('Button is Single Clicking....!');
+            }
+
+            function dclick(){
+                alert('Button is Double Clicking....!');
+            }
+
+            function mouseoverf(){
+                document.body.style.background = "lightgreen";
+            }
+
+            function mouseoutf(){
+                document.body.style.background = "cyan";
+            }
+
+            function mousemovef(){
+                document.body.style.background = "orange";
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="">
+            <label>First Name : </label><input type="text" name="firstname"  onmousedown="sclick()"><br><br>
+            <label>Last Name : </label><input type="text" name="lastname"  onmouseover="mouseoverf()" onmouseout="mouseoutf()"><br><br>
+            <label>Contact No.</label><input type="text" name="contactnumber" onmousemove="mousemovef()"><br><br>
+            <input type="button" value="Single Click" onclick="sclick()">
+            <input type="button" value="Double Click" onclick="dclick()">
+            <button onmouseup="mousemovef()">OnMouseMove</button>
+        </form>
+    </body>
+</html>

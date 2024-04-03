@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event</title>
+        <script>
+            function myfunction() {
+                document.body.style.background = "skyblue";
+            }
+
+            function wrong() {
+                document.body.style.background = "red";
+            }
+
+            function changeborder() {
+                document.body.style.border = "2px solid";
+            }
+
+            function resetpage() {
+                document.body.style.background = "orange";
+            }
+
+            function submitpage() {
+                alert('Form is Submitted Sucessfully!!!');
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" onreset="resetpage()" onsubmit="submitpage()">
+            <label>First Name : </label><input type="text" name="firstname" onblur="myfunction()"><br><br>
+            <label>Last Name : </label><input type="text" name="lastname" onfocus="myfunction()"><br><br>
+            <label>Email : </label><input type="email" name="name" onchange="myfunction()"><br><br>
+            <label>Email : </label><input type="email" name="name" oninvalid="wrong()"><br><br>
+            <label>Password : </label><input type="password" name="password" oninput="changeborder()"><br><br>
+            <input type="submit" value="Submit"> <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
