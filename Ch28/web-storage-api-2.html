@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session Web Storage API</title>
+        <script>
+            function clickCounter(){
+                if(typeof(Storage) != "undefined")
+                {
+                    if(sessionStorage.clickCount)
+                    {
+                        sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+                    }
+                    else
+                    {
+                        sessionStorage.clickCount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You Have the clicked the Button " + sessionStorage.clickCount + " Times.";
+                }
+                else
+                {
+                    document.getElementById("result").innerHTML = "Your Browser doesn't Support Web Storage."
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="clickCounter()">Click Me!</button>
+        <p id="result"></p>
+        <p>Click the button to start Counting.....</p>
+    </body>
+</html>

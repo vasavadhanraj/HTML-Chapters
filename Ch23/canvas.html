@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2D Canvas</title>
+    </head>
+    <body>
+        <canvas id="mycanvas1" width="300" height="200" style="border: 2px solid;">
+            Not Support Canvas..
+        </canvas>
+        <script>
+            var c = document.getElementById("mycanvas1");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#f2db";
+            ctx.fillRect(0,0,200,100);
+        </script>
+    </body>
+</html>

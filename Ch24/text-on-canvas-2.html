@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stroke Text</title>
+    </head>
+    <body>
+        <canvas id="mycanvas" width="300" height="200" style="border: 2px solid;">
+            Not Support Canvas..
+        </canvas>
+        <script>
+            var c = document.getElementById("mycanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World",10,50);
+        </script>
+    </body>
+</html>
